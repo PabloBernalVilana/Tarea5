@@ -10,8 +10,10 @@ import javax.swing.JOptionPane;
 public class MainApp {
 
 	public static void main(String[] args) {
-		// Definicion constante PI
+		// Definicion de la constante PI
+		// Definicion de la constante exponente del radio
 		final double pi = 3.141592;
+		final int exponenteCuadrado = 2;
 		// introduccion por teclado mediante JOptionPane
 		String radioString = JOptionPane.showInputDialog(null, "Introduce el radio: ");
 		// se pasa la variable de String a Double
@@ -20,8 +22,9 @@ public class MainApp {
 		System.out.println("Formula del area de un circulo: area = (Pi * Radio^2)");
 		// muestra por consola los valores de la operacion y el resultado final
 		// elevar el cuadrado mediante Math.pow
-		System.out.println(pi + " * " + Math.pow(radioDouble, radioDouble) + " = " + (pi * Math.pow(radioDouble, radioDouble)));
+		// Math.pow (base, exponente)
+		System.out.println(pi + " * " + (Math.pow(radioDouble, exponenteCuadrado)) + " = " + (pi * Math.pow(radioDouble, exponenteCuadrado)));
 		// muestra por ventana emergente la operacion y el resultado
-		JOptionPane.showMessageDialog(null, (pi + " * " + Math.pow(radioDouble, radioDouble) + " = " + (pi * Math.pow(radioDouble, radioDouble))));
+		JOptionPane.showMessageDialog(null, (pi + " * " + Math.pow(radioDouble, exponenteCuadrado) + " = " + (pi * Math.pow(radioDouble, exponenteCuadrado))));
 	}
 }
